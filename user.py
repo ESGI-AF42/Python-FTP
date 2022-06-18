@@ -8,14 +8,18 @@ class User():
     parent_path = actual_path.parent.__str__()
     user_file_path = parent_path+'\\user.csv'
 
-    def __init__(self, nickname, status):
+    def __init__(self, nickname,password,status):
         self.nickname = nickname
+        self.password = password
         self.status = status
 
 
 
     def get_user_nickname(self):
         return self.nickname
+
+    def get_user_password(self):
+        return self.password
 
     def get_user_status(self):
         return self.status
@@ -46,7 +50,7 @@ class User():
             with open(User.user_file_path, 'r') as csvfile:
                 filereader = csv.reader(csvfile, lineterminator = '\n', delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                 for line in filereader:
-                        user_list.append(User(line[cpt_column["Nickname"]], line[cpt_column["Status"]]))
+                    user_list.append(User(line[cpt_column["Nickname"]],line[cpt_column["Password"]], line[cpt_column["Status"]]))
                 csvfile.close()
             return user_list    
     #fin load_user_from_csv()
@@ -63,6 +67,10 @@ class User():
                 for column in line:
                     if column == "Nickname":
                         columnInfile["Nickname"] = tmp_cpt
+                        tmp_cpt=tmp_cpt+1
+
+                    elif column == "Password":
+                        columnInfile["Password"] = tmp_cpt
                         tmp_cpt=tmp_cpt+1
 
                     elif column == "Status":
@@ -89,7 +97,7 @@ class User():
                 if self.get_user_nickname() == line[cpt_column['Nickname']]:
                     filewriter.writerow([self.get_user_nickname(), self.get_user_status()]) 
                 else:
-                    filewriter.writerow([line[cpt_column['Nickname']], line[cpt_column['Status']]]) 
+                    filewriter.writerow([line[cpt_column['Nickname']],line[cpt_column['Password']], line[cpt_column['Status']]]) 
         shutil.move(tempfile.name, User.user_file_path) 
     #fin search_in_file()
 
