@@ -3,8 +3,7 @@ import os,sys,time
 from sqlite3 import connect
 from ftplib import FTP
 from shutil import unregister_unpack_format
-from threading import Thread
-import server
+
 
 try:
         ftp = FTP('127.0.0.1')   # connect to host, default port
@@ -43,12 +42,14 @@ def app_start():
     slow_print("2 : créer un dossier")
     slow_print("3 : supprimer un dossier/fichier") 
     slow_print("4 : upload un fichier")
+    slow_print("5 : download un fichier")
     print(" ")
     time.sleep(0.25)
+
     i = int(input("Veuillez choisir : "))
 
-    while i < 0 or i > 4:
-        slow_print("Valeur incorrect, veuillez choisir un chiffre entre 1 et 5")
+    while i < 0 or i > 5:
+        slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 5")
         time.sleep(2)
         clearConsole()
         print("Vous etes dans : " + ftp.pwd())
@@ -57,6 +58,7 @@ def app_start():
         print("2 : créer un dossier")
         print("3 : supprimer un dossier/fichier") 
         print("4 : upload un fichier")
+        print("5 : download un fichier")
         print(" ")
         i = int(input("Veuillez choisir : "))
             
@@ -70,12 +72,14 @@ def app_start():
         delete()
     if i == 4:
         upload_file()
+    if i == 5:
+        download_file()
  
 
 def navigate():
     clearConsole()
-    print("Dans quel fichier voulez-vous aller")
-    file,filename , cpt = list_file_with_number()
+    print("Dans quel dossier voulez-vous aller")
+    file,filename , cpt = list_file_folder()
     correct_numbers = []
     for i in range(0,cpt):
         if file[i].startswith("d"):
@@ -102,21 +106,77 @@ def list_rep():
     clearConsole()
     ftp.retrlines('LIST') 
     input("Presser entrer pour continuer")
-    Thread.start_new_thread(server.this_ftp.add_user,('userA','12345',".",'elradfmwM'))
 
 def create_rep():
+    path = ftp.pwd()
+    print("créer un dossier")
+    newdir = input(path)
+    pathjoin = os.path.join(path, newdir)
+    try:
+        ftp.mkd(pathjoin)
+        slow_print("le dossier a été créé avec succès")
+    except:
+        slow_print("le dossier existe déjà")
+        time.sleep(0.25)
+        slow_print("il n'a pas pu être créer")      
+        time.sleep(2)
     clearConsole()
-    print("cré un dossier")
+    
 
 def delete():
     clearConsole()
-    print("suppr un dossier/fichier")
+    print("Quel fichier/dossier voulez-vous supprimer")
+    print("ATTENTION")
+    print("s'il s'agit d'un dossier, tous les fichiers et sous dossiers seront suprimmés")
+    file,filename , cpt = list_file_folder()
+    for i in range(0,cpt):
+        to_print = str(i) + " : " + filename[i]
+        slow_print(to_print)
+    print(" ")
+    time.sleep(0.25)
+    j = int(input("Veuillez choisir : "))
+    while j not in range (0,cpt):
+        slow_print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
+        time.sleep(2)
+        clearConsole()
+        print("Quel fichier/dossier voulez-vous supprimer")
+        print("ATTENTION")
+        print("s'il s'agit d'un dossier, tous les fichiers et sous dossiers seront suprimmés")
+        for i in range(0,cpt):
+            to_print = str(i) + " : " + filename[i]
+            slow_print(to_print)
+        print(" ")
+        j = int(input("Veuillez choisir : "))
+
+    while True:
+        clearConsole()
+        print("voulez-vous vraiment supprimer le fichier/dossier", filename[i])
+        delete_file = input("(y/n) : ")
+        if delete_file == "y" or delete_file == "Y" or delete_file == "yes":
+            try:
+                ftp.rmd(filename[i])
+                slow_print("le dossier/fichier a été supprimé")
+            except:
+                slow_print("le dossier/fichier n'a pas pu être supprimé")
+            time.sleep(2)
+            break
+        
+        elif delete_file == "n" or delete_file == "N" or delete_file == "no":
+            slow_print("le dossier/fichier ne sera pas supprimé")
+            time.sleep(2)
+            break
+        
+        else:
+            slow_print("réponse incorrect")
+            time.sleep(0.25)
+            slow_print("veuillez réessayer")
+            time.sleep(1)
 
 def upload_file():
     clearConsole()
     print("up un fichier")
 
-def upload_file():
+def download_file():
     clearConsole()
     print("down un fichier")
 
@@ -134,16 +194,18 @@ def slow_print(str):
         time.sleep(0.001)
     print('')
 
-def list_file_with_number():
+def list_file_folder():
     file = []
-    file_name = []
+    filename = []
     ftp.dir(file.append)
     cpt = 0   
     for name in ftp.nlst():
-        file_name.append(name)
+        filename.append(name)
         cpt = cpt + 1
 
-    return file, file_name , cpt
+    return file, filename , cpt
+
+
 
 
 
