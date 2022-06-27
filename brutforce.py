@@ -14,8 +14,8 @@ def product_loop(password, generator):
 
 def bruteforce(password, max_nchar=8):
     
-    password_commun = loadtxt('mdp-plus-probable.txt', dtype=str)
-    noms_communm = loadtxt('middle-names.txt', dtype=str)
+    password_commun = loadtxt('mdp_plus_probable.txt', dtype=str)
+    noms_communm = loadtxt('middle_names.txt', dtype=str)
     cp = [c for c in password_commun if c == password]
     cn = [c for c in noms_communm if c == password]
     cnl = [c.lower() for c in noms_communm if c.lower() == password]

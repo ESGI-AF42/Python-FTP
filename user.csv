@@ -1,2 +1,7 @@
-Nickname;Password;Status
-admin;harry2022;admin
+Nickname;Password;Status;Site
+admin;12345;admin;P
+userP;12345;user;P
+userP2;12345;user;P
+userS;12345;user;S
+userR;12345;user;R
+userG;12345;user;G
