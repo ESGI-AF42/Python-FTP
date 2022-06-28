@@ -11,7 +11,7 @@ except:
         print('serveur eteint')
         exit()
 
-
+#debut
 def main ():
 
     connected = False
@@ -33,7 +33,7 @@ def main ():
 
 
 
-
+#debut
 def app_start():
     clearConsole()
     print("Vous etes dans : " + ftp.pwd())
@@ -75,7 +75,7 @@ def app_start():
     if i == 5:
         download_file()
  
-
+#debut
 def navigate():
     clearConsole()
     print("Dans quel dossier voulez-vous aller")
@@ -100,13 +100,16 @@ def navigate():
                 print(to_print)
         print(" ")
         j = int(input("Veuillez choisir : "))
-    ftp.cwd(filename[i])
+    ftp.cwd(filename[j])
 
+#debut
 def list_rep():
     clearConsole()
     ftp.retrlines('LIST') 
     input("Presser entrer pour continuer")
 
+
+#debut
 def create_rep():
     path = ftp.pwd()
     print("créer un dossier")
@@ -123,6 +126,7 @@ def create_rep():
     clearConsole()
     
 
+#debut
 def delete():
     clearConsole()
     print("Quel fichier/dossier voulez-vous supprimer")
@@ -172,21 +176,127 @@ def delete():
             slow_print("veuillez réessayer")
             time.sleep(1)
 
-def upload_file():
-    clearConsole()
-    print("up un fichier")
 
+#debut
+def upload_file():
+    slow_print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer (sans \\ à la fin)")
+    file_path = input()
+    slow_print("Quel fichier voulez-vous charger ?")
+    file_name = input()
+    file_join = file_path+"\\"+file_name
+    
+    try:
+        file = open(file_join,'rb')
+        slow_print("Fichier chargé")
+        while True:
+            clearConsole()
+            print("Voulez-vous vraiment uploader le fichier"+ file_name+" dans "+ ftp.pwd())
+            upload_file = input("(y/n) : ")
+            if upload_file == "y" or upload_file == "Y" or upload_file == "yes":
+                command = "STOR "+file_name    
+                try:
+                    ftp.storbinary(command, file)     
+                    slow_print("le fichier a été uploadé")
+                except:
+                    slow_print("le fichier n'a pas pu être uploadé")
+                time.sleep(2)
+                break
+            
+            elif upload_file == "n" or upload_file == "N" or upload_file == "no":
+                slow_print("le fichier ne sera pas uploadé")
+                time.sleep(2)
+                break
+            
+            else:
+                slow_print("réponse incorrect")
+                time.sleep(0.25)
+                slow_print("veuillez réessayer")
+                time.sleep(1)
+        file.close()
+    except:
+        slow_print("Le fichier " + file_join + " n'existe pas")   
+        slow_print("annulation de l'upload, retour au menu principal") 
+        time.sleep(1)
+
+     
+
+
+#debut
 def download_file():
     clearConsole()
-    print("down un fichier")
+    print("Quel fichier voulez-vous download")
+    files,filename , cpt = list_file_folder()
+    correct_numbers = []
+    for i in range(0,cpt):
+        if not files[i].startswith("d"):
+            correct_numbers.append(i)
+            to_print = str(i) + " : " + filename[i]
+            slow_print(to_print)
+    print(" ")
+    time.sleep(0.25)
+    j = int(input("Veuillez choisir : "))
+    while j not in correct_numbers:
+        slow_print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
+        time.sleep(2)
+        clearConsole()
+        print("Quel fichier voulez-vous download")
+        for i in range(0,cpt):
+            if not files[i].startswith("d"):
+                to_print = str(i) + " : " + filename[i]
+                print(to_print)
+        print(" ")
+        j = int(input("Veuillez choisir : "))
+
+    try:
+        path = os.getcwd()
+        local_filename = os.path.join(r""+path, "Local\\Download")
+        local_filename = os.path.join(r""+local_filename, filename[j])
+        lf = open(local_filename, "wb")
+        
+        while True:
+            clearConsole()
+            print("Voulez-vous vraiment download le fichier"+ filename[j])
+            down_file = input("(y/n) : ")
+            if down_file == "y" or down_file == "Y" or down_file == "yes":
+                command = "RETR "+filename[j]    
+                try:
+                    ftp.retrbinary(command , lf.write, 8*1024)  
+                    slow_print("le fichier a été download")
+                except:
+                    slow_print("le fichier n'a pas pu être download")
+                time.sleep(2)
+                break
+            
+            elif down_file == "n" or down_file == "N" or down_file == "no":
+                slow_print("le fichier ne sera pas download")
+                time.sleep(2)
+                break
+            
+            else:
+                slow_print("réponse incorrect")
+                time.sleep(0.25)
+                slow_print("veuillez réessayer")
+                time.sleep(1)
+        local_filename.close()
+    except:
+        slow_print("Le fichier " + local_filename + " ne peux pas être créé")   
+        slow_print("annulation du download, retour au menu principal") 
+        time.sleep(1)
 
 
+
+
+
+#debut
 def clearConsole():
     command = 'clear'
     if os.name in ('nt', 'dos'):  
         command = 'cls'
     os.system(command)
 
+
+
+#debut
 def slow_print(str):
     for char in str:
         sys.stdout.write(char)
@@ -194,6 +304,9 @@ def slow_print(str):
         time.sleep(0.001)
     print('')
 
+
+
+#debut
 def list_file_folder():
     file = []
     filename = []
@@ -206,8 +319,5 @@ def list_file_folder():
     return file, filename , cpt
 
 
-
-
-
-   
+#lancement du programme
 main()

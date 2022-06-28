@@ -15,7 +15,8 @@ PORT = 21
       
 authorizer = DummyAuthorizer()
 handler = FTPHandler
-user_list=User.load_user_from_csv()# récupère la liste de tous les utilisateurs qui se sont une fois connecté
+user_list=User.load_user_from_csv()# permet de charger tous les utilisateurs de la base de donnée lors du lancement du serveur
+#uniquement pour faciliter le lancement du serveur ftp en python pour les tests, n'a pas pour but d'être une solution valable en entreprise
 for user in user_list:
     if user.get_user_status() == 'admin':
         authorizer.add_user(user.get_user_nickname(), user.get_user_password(), homedir=FTP_path, perm='elradfmwMT')
