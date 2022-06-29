@@ -13,7 +13,7 @@ def main ():
             exit()
 
     curDT = datetime.now()
-    date = date_time = curDT.strftime("%m-%d-%Y_%H-%M-%S")
+    date = curDT.strftime("%m-%d-%Y_%H-%M-%S")
     new_file = "Audit_"+date
     root = ftp.pwd()
     filename = ["Rennes","Grenoble","Strasbourg"]
