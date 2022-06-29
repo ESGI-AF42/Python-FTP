@@ -4,6 +4,7 @@ from sqlite3 import connect
 from ftplib import FTP
 from shutil import unregister_unpack_format
 
+username = ""
 
 try:
         ftp = FTP('127.0.0.1')   # connect to host, default port
@@ -17,6 +18,7 @@ def main ():
     connected = False
     while not connected:
         try:
+            global username 
             username = input("Username : ")
             password = input("Password : ")
             ftp.login(username,password)
@@ -43,37 +45,61 @@ def app_start():
     slow_print("3 : supprimer un dossier/fichier") 
     slow_print("4 : upload un fichier")
     slow_print("5 : download un fichier")
+    slow_print("6 : Quit")
+    if username == "admin":
+        slow_print("7 : bruteforce")
+        slow_print("8 : Forcer sauvegarde fichier d'Audit")
     print(" ")
     time.sleep(0.25)
 
     i = int(input("Veuillez choisir : "))
 
-    while i < 0 or i > 5:
-        slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 5")
-        time.sleep(2)
-        clearConsole()
-        print("Vous etes dans : " + ftp.pwd())
-        print("0 : naviguer")
-        print("1 : Voir repertoire")
-        print("2 : créer un dossier")
-        print("3 : supprimer un dossier/fichier") 
-        print("4 : upload un fichier")
-        print("5 : download un fichier")
-        print(" ")
-        i = int(input("Veuillez choisir : "))
+    if username == "admin":
+        if i < 0 or i > 8 :
+            slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 8")
+            time.sleep(2)
+            clearConsole()
+            app_start()
+            
+    else:
+        if i < 0 or i > 6 :
+            slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 6")
+            time.sleep(2)
+            clearConsole()
+            app_start()
+        
             
     if i == 0:
         navigate()
+
     if i == 1:
         list_rep()
+
     if i == 2:
         create_rep()
+
     if i == 3:
         delete()
+
     if i == 4:
         upload_file()
+
     if i == 5:
         download_file()
+
+    if i == 6:
+        clearConsole()
+        slow_print("Vous allez être déconnecté")
+        time.sleep(2)
+        ftp.close()
+        quit()
+
+    if i == 7:
+        start_brut()
+
+    if i == 8:
+        force_audit_save()
+    
  
 #debut
 def navigate():
@@ -284,8 +310,11 @@ def download_file():
         time.sleep(1)
 
 
+def start_brut():
+    print("brute")
 
-
+def force_audit_save():
+    print("save_audit")
 
 #debut
 def clearConsole():
