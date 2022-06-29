@@ -1,8 +1,5 @@
-from asyncio.windows_events import NULL
 import os,sys,time
-from sqlite3 import connect
 from ftplib import FTP
-from shutil import unregister_unpack_format
 import save
 
 username = ""

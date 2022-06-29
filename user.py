@@ -1,4 +1,4 @@
-import os, hashlib, pathlib, binascii, time, csv, shutil
+import pathlib, csv, shutil
 from tempfile import NamedTemporaryFile
 
 

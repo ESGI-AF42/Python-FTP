@@ -1,8 +1,5 @@
 import pathlib
-from collections import UserList
-from threading import Thread
 from user import User
-from pyftpdlib import servers
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 from pyftpdlib.authorizers import DummyAuthorizer
