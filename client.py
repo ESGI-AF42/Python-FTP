@@ -3,6 +3,7 @@ import os,sys,time
 from sqlite3 import connect
 from ftplib import FTP
 from shutil import unregister_unpack_format
+import save
 
 username = ""
 
@@ -73,7 +74,9 @@ def app_start():
         navigate()
 
     if i == 1:
-        list_rep()
+        clearConsole()
+        ftp.retrlines('LIST') 
+        input("Presser entrer pour continuer")
 
     if i == 2:
         create_rep()
@@ -98,7 +101,13 @@ def app_start():
         start_brut()
 
     if i == 8:
-        force_audit_save()
+        dossier = save.main()
+        slow_print("Dossier ("+ dossier + ") de sauvegarde créé")
+        time.sleep(5)
+        slow_print("Tous les fichiers d'audit y ont été sauvegardé")
+        time.sleep(1)
+        slow_print("retour au menu principal")
+        time.sleep(2)
     
  
 #debut
@@ -128,11 +137,8 @@ def navigate():
         j = int(input("Veuillez choisir : "))
     ftp.cwd(filename[j])
 
-#debut
-def list_rep():
-    clearConsole()
-    ftp.retrlines('LIST') 
-    input("Presser entrer pour continuer")
+
+    
 
 
 #debut
