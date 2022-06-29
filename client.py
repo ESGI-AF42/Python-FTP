@@ -1,6 +1,7 @@
-import os,sys,time
+import os,sys,time, save , scanport #, brutforce
 from ftplib import FTP
-import save
+from tkinter import N
+
 
 username = ""
 
@@ -10,8 +11,10 @@ except:
         print('serveur eteint')
         exit()
 
-#debut
-def main ():
+
+
+#debut main()
+def main():
 
     connected = False
     while not connected:
@@ -46,14 +49,15 @@ def app_start():
     slow_print("6 : Quit")
     if username == "admin":
         slow_print("7 : bruteforce")
-        slow_print("8 : Forcer sauvegarde fichier d'Audit")
+        slow_print("8 : Scan de port")
+        slow_print("9 : Forcer sauvegarde fichier d'Audit")
     print(" ")
     time.sleep(0.25)
 
     i = int(input("Veuillez choisir : "))
 
     if username == "admin":
-        if i < 0 or i > 8 :
+        if i < 0 or i > 9 :
             slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 8")
             time.sleep(2)
             clearConsole()
@@ -95,9 +99,13 @@ def app_start():
         quit()
 
     if i == 7:
-        start_brut()
+        print("bruteforce")
+       # brutforce.main()
 
     if i == 8:
+        scanport.main()
+
+    if i == 9:
         dossier = save.main()
         slow_print("Dossier ("+ dossier + ") de sauvegarde créé")
         time.sleep(5)
@@ -107,8 +115,10 @@ def app_start():
         time.sleep(2)
     
  
-#debut
+
+#debut navigate()
 def navigate():
+    a=None
     clearConsole()
     print("Dans quel dossier voulez-vous aller")
     file,filename , cpt = list_file_folder()
@@ -118,27 +128,34 @@ def navigate():
             correct_numbers.append(i)
             to_print = str(i) + " : " + filename[i]
             slow_print(to_print)
+    print("/ : Back to root")
     print(" ")
     time.sleep(0.25)
-    j = int(input("Veuillez choisir : "))
-    while j not in correct_numbers:
-        slow_print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
-        time.sleep(2)
-        clearConsole()
-        print("Dans quel fichier voulez-vous aller")
-        for i in range(0,cpt):
-            if file[i].startswith("d"):
-                to_print = str(i) + " : " + filename[i]
-                print(to_print)
-        print(" ")
-        j = int(input("Veuillez choisir : "))
-    ftp.cwd(filename[j])
+    j = input("Veuillez choisir : ")
+    if j != "/":   
+        while int(j) not in correct_numbers:
+            slow_print("Valeur incorrecte, veuillez choisir un chiffre dans la liste")
+            time.sleep(2)
+            clearConsole()
+            print("Dans quel fichier voulez-vous aller")
+            for i in range(0,cpt):
+                if file[i].startswith("d"):
+                    to_print = str(i) + " : " + filename[i]
+                    print(to_print)
+            print("/ : Back to root")
+            print("")
+            j = input("Veuillez choisir : ")
+        ftp.cwd(filename[int(j)])
+    else:
+        ftp.cwd("/")
+        
+    
 
 
     
 
 
-#debut
+#debut create_rep()
 def create_rep():
     path = ftp.pwd()
     print("créer un dossier")
@@ -155,7 +172,7 @@ def create_rep():
     clearConsole()
     
 
-#debut
+#debut delete()
 def delete():
     clearConsole()
     print("Quel fichier/dossier voulez-vous supprimer")
@@ -186,13 +203,17 @@ def delete():
         print("voulez-vous vraiment supprimer le fichier/dossier", filename[i])
         delete_file = input("(y/n) : ")
         if delete_file == "y" or delete_file == "Y" or delete_file == "yes":
-            try:
-                ftp.rmd(filename[i])
-                slow_print("le dossier/fichier a été supprimé")
-            except:
-                slow_print("le dossier/fichier n'a pas pu être supprimé")
-            time.sleep(2)
-            break
+                try:
+                    if file[i].startswith('d'):
+                        ftp.rmd(filename[i])
+                        slow_print("le dossier a été supprimé")
+                    else:
+                        ftp.delete(filename[i])
+                        slow_print("le fichier a été supprimé")
+                except:
+                    slow_print("le dossier n'a pas pu être supprimé")
+                time.sleep(2)
+                break
         
         elif delete_file == "n" or delete_file == "N" or delete_file == "no":
             slow_print("le dossier/fichier ne sera pas supprimé")
@@ -206,7 +227,7 @@ def delete():
             time.sleep(1)
 
 
-#debut
+#debut upload_file()
 def upload_file():
     slow_print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer (sans \\ à la fin)")
     file_path = input()
@@ -250,7 +271,7 @@ def upload_file():
      
 
 
-#debut
+#debut download_file()
 def download_file():
     clearConsole()
     print("Quel fichier voulez-vous download")
@@ -313,13 +334,9 @@ def download_file():
         time.sleep(1)
 
 
-def start_brut():
-    print("brute")
 
-def force_audit_save():
-    print("save_audit")
 
-#debut
+#debut clearConsole()
 def clearConsole():
     command = 'clear'
     if os.name in ('nt', 'dos'):  
@@ -328,7 +345,7 @@ def clearConsole():
 
 
 
-#debut
+#debut slow_print()
 def slow_print(str):
     for char in str:
         sys.stdout.write(char)
@@ -338,7 +355,7 @@ def slow_print(str):
 
 
 
-#debut
+#debut list_file_folder()
 def list_file_folder():
     file = []
     filename = []

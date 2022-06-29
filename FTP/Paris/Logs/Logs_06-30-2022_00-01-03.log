@@ -1,0 +1,142 @@
+INFO:pyftpdlib:concurrency model: async
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:>>> starting FTP server on 127.0.0.1:21, pid=20960 <<<
+INFO:pyftpdlib:127.0.0.1:50728-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50728-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50743-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50743-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50743-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:50767-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50767-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50767-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:50767-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:50791-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50791-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50791-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:50791-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:50728-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:50728-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:50791-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:50837-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50837-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50837-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:50837-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:50889-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50889-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50889-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:50889-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:50889-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:50837-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:50921-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50921-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50921-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\PARIS 550 'File exists.'
+INFO:pyftpdlib:127.0.0.1:50947-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:50947-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:50947-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:50947-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:50947-[admin] RMD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_04.txt 550 'Not a directory.'
+INFO:pyftpdlib:127.0.0.1:50921-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:50947-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:51019-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:51019-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:51019-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:50889-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:50889-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:51019-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:51019-[admin] RMD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_04.txt 550 'Not a directory.'
+INFO:pyftpdlib:127.0.0.1:51019-[admin] RMD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_04.txt 550 'Not a directory.'
+INFO:pyftpdlib:127.0.0.1:51019-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:64122-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:64122-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:64122-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:64122-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:64122-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64122-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64122-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:64122-[admin] DELE C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_04.txt 250
+INFO:pyftpdlib:127.0.0.1:64189-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:64189-[] USER 'UserP' failed login.
+INFO:pyftpdlib:127.0.0.1:64189-[userP] USER 'userP' logged in.
+INFO:pyftpdlib:127.0.0.1:64189-[userP] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:64206-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:64206-[userR] USER 'userR' logged in.
+INFO:pyftpdlib:127.0.0.1:64206-[userR] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:64206-[userR] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\fichier_to_upload.txt completed=1 bytes=5 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64206-[userR] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_02.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64206-[userR] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:64245-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:64245-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:64122-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:64122-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:64248-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:64248-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 257
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes 257
+INFO:pyftpdlib:127.0.0.1:64248-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Grenoble 257
+INFO:pyftpdlib:127.0.0.1:64248-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Strasbourg 257
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_02.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes\Audit_02.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_04-Copie.txt completed=1 bytes=0 seconds=0.016
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes\Audit_04-Copie.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\fichier_to_upload.txt completed=1 bytes=5 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Rennes\fichier_to_upload.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit\Audit_01.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Grenoble\Audit_01.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg\Audit\Audit_03.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Strasbourg 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_06-30-2022_00-27-00\Strasbourg\Audit_03.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg\Audit 250
+INFO:pyftpdlib:127.0.0.1:64248-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:64245-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:64245-[admin] FTP session closed (disconnect).
