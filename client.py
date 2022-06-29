@@ -26,7 +26,7 @@ def main():
             connected = True
         except:
             print(" ")
-            slow_print("mauvais credential, veuillez réessayer")
+            print("mauvais credential, veuillez réessayer")
             time.sleep(1)
             clearConsole()
 
@@ -40,17 +40,17 @@ def main():
 def app_start():
     clearConsole()
     print("Vous etes dans : " + ftp.pwd())
-    slow_print("0 : naviguer")
-    slow_print("1 : Voir repertoire")
-    slow_print("2 : créer un dossier")
-    slow_print("3 : supprimer un dossier/fichier") 
-    slow_print("4 : upload un fichier")
-    slow_print("5 : download un fichier")
-    slow_print("6 : Quit")
+    print("0 : naviguer")
+    print("1 : Voir repertoire")
+    print("2 : créer un dossier")
+    print("3 : supprimer un dossier/fichier") 
+    print("4 : upload un fichier")
+    print("5 : download un fichier")
+    print("6 : Quit")
     if username == "admin":
-        slow_print("7 : bruteforce")
-        slow_print("8 : Scan de port")
-        slow_print("9 : Forcer sauvegarde fichier d'Audit")
+        print("7 : bruteforce")
+        print("8 : Scan de port")
+        print("9 : Forcer sauvegarde fichier d'Audit")
     print(" ")
     time.sleep(0.25)
 
@@ -58,14 +58,14 @@ def app_start():
 
     if username == "admin":
         if i < 0 or i > 9 :
-            slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 8")
+            print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 8")
             time.sleep(2)
             clearConsole()
             app_start()
             
     else:
         if i < 0 or i > 6 :
-            slow_print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 6")
+            print("Valeur incorrect, veuillez choisir un chiffre entre 0 et 6")
             time.sleep(2)
             clearConsole()
             app_start()
@@ -93,7 +93,7 @@ def app_start():
 
     if i == 6:
         clearConsole()
-        slow_print("Vous allez être déconnecté")
+        print("Vous allez être déconnecté")
         time.sleep(2)
         ftp.close()
         quit()
@@ -107,11 +107,11 @@ def app_start():
 
     if i == 9:
         dossier = save.main()
-        slow_print("Dossier ("+ dossier + ") de sauvegarde créé")
+        print("Dossier ("+ dossier + ") de sauvegarde créé")
         time.sleep(5)
-        slow_print("Tous les fichiers d'audit y ont été sauvegardé")
+        print("Tous les fichiers d'audit y ont été sauvegardé")
         time.sleep(1)
-        slow_print("retour au menu principal")
+        print("retour au menu principal")
         time.sleep(2)
     
  
@@ -127,14 +127,14 @@ def navigate():
         if file[i].startswith("d"):
             correct_numbers.append(i)
             to_print = str(i) + " : " + filename[i]
-            slow_print(to_print)
+            print(to_print)
     print("/ : Back to root")
     print(" ")
     time.sleep(0.25)
     j = input("Veuillez choisir : ")
     if j != "/":   
         while int(j) not in correct_numbers:
-            slow_print("Valeur incorrecte, veuillez choisir un chiffre dans la liste")
+            print("Valeur incorrecte, veuillez choisir un chiffre dans la liste")
             time.sleep(2)
             clearConsole()
             print("Dans quel fichier voulez-vous aller")
@@ -163,11 +163,11 @@ def create_rep():
     pathjoin = os.path.join(path, newdir)
     try:
         ftp.mkd(pathjoin)
-        slow_print("le dossier a été créé avec succès")
+        print("le dossier a été créé avec succès")
     except:
-        slow_print("le dossier existe déjà")
+        print("le dossier existe déjà")
         time.sleep(0.25)
-        slow_print("il n'a pas pu être créer")      
+        print("il n'a pas pu être créer")      
         time.sleep(2)
     clearConsole()
     
@@ -181,12 +181,12 @@ def delete():
     file,filename , cpt = list_file_folder()
     for i in range(0,cpt):
         to_print = str(i) + " : " + filename[i]
-        slow_print(to_print)
+        print(to_print)
     print(" ")
     time.sleep(0.25)
     j = int(input("Veuillez choisir : "))
     while j not in range (0,cpt):
-        slow_print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
+        print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
         time.sleep(2)
         clearConsole()
         print("Quel fichier/dossier voulez-vous supprimer")
@@ -194,7 +194,7 @@ def delete():
         print("s'il s'agit d'un dossier, tous les fichiers et sous dossiers seront suprimmés")
         for i in range(0,cpt):
             to_print = str(i) + " : " + filename[i]
-            slow_print(to_print)
+            print(to_print)
         print(" ")
         j = int(input("Veuillez choisir : "))
 
@@ -206,38 +206,38 @@ def delete():
                 try:
                     if file[i].startswith('d'):
                         ftp.rmd(filename[i])
-                        slow_print("le dossier a été supprimé")
+                        print("le dossier a été supprimé")
                     else:
                         ftp.delete(filename[i])
-                        slow_print("le fichier a été supprimé")
+                        print("le fichier a été supprimé")
                 except:
-                    slow_print("le dossier n'a pas pu être supprimé")
+                    print("le dossier n'a pas pu être supprimé")
                 time.sleep(2)
                 break
         
         elif delete_file == "n" or delete_file == "N" or delete_file == "no":
-            slow_print("le dossier/fichier ne sera pas supprimé")
+            print("le dossier/fichier ne sera pas supprimé")
             time.sleep(2)
             break
         
         else:
-            slow_print("réponse incorrect")
+            print("réponse incorrect")
             time.sleep(0.25)
-            slow_print("veuillez réessayer")
+            print("veuillez réessayer")
             time.sleep(1)
 
 
 #debut upload_file()
 def upload_file():
-    slow_print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer (sans \\ à la fin)")
+    print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer (sans \\ à la fin)")
     file_path = input()
-    slow_print("Quel fichier voulez-vous charger ?")
+    print("Quel fichier voulez-vous charger ?")
     file_name = input()
     file_join = file_path+"\\"+file_name
     
     try:
         file = open(file_join,'rb')
-        slow_print("Fichier chargé")
+        print("Fichier chargé")
         while True:
             clearConsole()
             print("Voulez-vous vraiment uploader le fichier"+ file_name+" dans "+ ftp.pwd())
@@ -246,26 +246,26 @@ def upload_file():
                 command = "STOR "+file_name    
                 try:
                     ftp.storbinary(command, file)     
-                    slow_print("le fichier a été uploadé")
+                    print("le fichier a été uploadé")
                 except:
-                    slow_print("le fichier n'a pas pu être uploadé")
+                    print("le fichier n'a pas pu être uploadé")
                 time.sleep(2)
                 break
             
             elif upload_file == "n" or upload_file == "N" or upload_file == "no":
-                slow_print("le fichier ne sera pas uploadé")
+                print("le fichier ne sera pas uploadé")
                 time.sleep(2)
                 break
             
             else:
-                slow_print("réponse incorrect")
+                print("réponse incorrect")
                 time.sleep(0.25)
-                slow_print("veuillez réessayer")
+                print("veuillez réessayer")
                 time.sleep(1)
         file.close()
     except:
-        slow_print("Le fichier " + file_join + " n'existe pas")   
-        slow_print("annulation de l'upload, retour au menu principal") 
+        print("Le fichier " + file_join + " n'existe pas")   
+        print("annulation de l'upload, retour au menu principal") 
         time.sleep(1)
 
      
@@ -281,12 +281,12 @@ def download_file():
         if not files[i].startswith("d"):
             correct_numbers.append(i)
             to_print = str(i) + " : " + filename[i]
-            slow_print(to_print)
+            print(to_print)
     print(" ")
     time.sleep(0.25)
     j = int(input("Veuillez choisir : "))
     while j not in correct_numbers:
-        slow_print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
+        print("Valeur incorrect, veuillez choisir un chiffre dans la liste")
         time.sleep(2)
         clearConsole()
         print("Quel fichier voulez-vous download")
@@ -311,26 +311,26 @@ def download_file():
                 command = "RETR "+filename[j]    
                 try:
                     ftp.retrbinary(command , lf.write, 8*1024)  
-                    slow_print("le fichier a été download")
+                    print("le fichier a été download")
                 except:
-                    slow_print("le fichier n'a pas pu être download")
+                    print("le fichier n'a pas pu être download")
                 time.sleep(2)
                 break
             
             elif down_file == "n" or down_file == "N" or down_file == "no":
-                slow_print("le fichier ne sera pas download")
+                print("le fichier ne sera pas download")
                 time.sleep(2)
                 break
             
             else:
-                slow_print("réponse incorrect")
+                print("réponse incorrect")
                 time.sleep(0.25)
-                slow_print("veuillez réessayer")
+                print("veuillez réessayer")
                 time.sleep(1)
         local_filename.close()
     except:
-        slow_print("Le fichier " + local_filename + " ne peux pas être créé")   
-        slow_print("annulation du download, retour au menu principal") 
+        print("Le fichier " + local_filename + " ne peux pas être créé")   
+        print("annulation du download, retour au menu principal") 
         time.sleep(1)
 
 
@@ -345,13 +345,6 @@ def clearConsole():
 
 
 
-#debut slow_print()
-def slow_print(str):
-    for char in str:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(0.001)
-    print('')
 
 
 
