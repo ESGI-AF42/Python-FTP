@@ -1,0 +1,26 @@
+INFO:pyftpdlib:concurrency model: multi-thread
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:127.0.0.1:61274-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61274-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61274-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:61344-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61344-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61344-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:61487-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61487-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61487-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:61518-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61518-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61518-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:61593-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61593-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61593-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:61593-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:61864-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61864-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61864-[admin] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:61895-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:61895-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:61895-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:61895-[admin] FTP session closed (disconnect).
