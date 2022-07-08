@@ -229,11 +229,11 @@ def delete():
 
 #debut upload_file()
 def upload_file():
-    print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer (sans \\ à la fin)")
+    print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer")
     file_path = input()
     print("Quel fichier voulez-vous charger ?")
     file_name = input()
-    file_join = file_path+"\\"+file_name
+    file_join = os.path.join(file_path,file_name)
     
     try:
         file = open(file_join,'rb')

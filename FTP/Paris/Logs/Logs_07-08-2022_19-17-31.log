@@ -1,0 +1,11 @@
+INFO:pyftpdlib:concurrency model: multi-thread
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:127.0.0.1:62716-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:62716-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:62716-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:62716-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:62716-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit\Audit_01.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62716-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit\fichier_to_upload.txt completed=1 bytes=5 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62716-[admin] Control connection timed out.
+INFO:pyftpdlib:127.0.0.1:62716-[admin] FTP session closed (disconnect).

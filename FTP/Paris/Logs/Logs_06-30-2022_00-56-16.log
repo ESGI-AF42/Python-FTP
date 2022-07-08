@@ -1,0 +1,7 @@
+INFO:pyftpdlib:concurrency model: async
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:>>> starting FTP server on 127.0.0.1:21, pid=21056 <<<
+INFO:pyftpdlib:127.0.0.1:59278-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:59278-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:59278-[admin] FTP session closed (disconnect).

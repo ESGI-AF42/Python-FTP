@@ -1,0 +1,72 @@
+INFO:pyftpdlib:concurrency model: multi-thread
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:127.0.0.1:62673-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:62673-[admin] USER 'admin' logged in.
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 257
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes 257
+INFO:pyftpdlib:127.0.0.1:62673-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Grenoble 257
+INFO:pyftpdlib:127.0.0.1:62673-[admin] MKD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Strasbourg 257
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_02.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes\Audit_02.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\Audit_04-Copie.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes\Audit_04-Copie.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit\fichier_to_upload.txt completed=1 bytes=5 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Rennes\fichier_to_upload.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Rennes\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit\Audit_01.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Grenoble\Audit_01.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Grenoble\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] RETR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg\Audit\Audit_03.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Strasbourg 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] STOR C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Paris\Save\Audit_07-08-2022_19-17-23\Strasbourg\Audit_03.txt completed=1 bytes=0 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] CWD C:\Users\FabienPires\Desktop\Pouet\ESGI\Git\Python-FTP\FTP\Strasbourg\Audit 250
+INFO:pyftpdlib:127.0.0.1:62673-[admin] FTP session closed (disconnect).

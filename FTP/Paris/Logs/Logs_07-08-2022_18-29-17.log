@@ -1,0 +1,16 @@
+INFO:pyftpdlib:concurrency model: async
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:>>> starting FTP server on 127.0.0.1:21, pid=14068 <<<
+INFO:pyftpdlib:127.0.0.1:49503-[] FTP session opened (connect)
+ERROR:pyftpdlib:Traceback (most recent call last):
+  File "C:\Users\FabienPires\AppData\Local\Programs\Python\Python310\lib\site-packages\pyftpdlib\servers.py", line 262, in handle_accepted
+    handler = self.handler(sock, self, ioloop=self.ioloop)
+  File "C:\Users\FabienPires\AppData\Local\Programs\Python\Python310\lib\site-packages\pyftpdlib\handlers.py", line 1315, in __init__
+    self._idler = self.ioloop.call_later(
+  File "C:\Users\FabienPires\AppData\Local\Programs\Python\Python310\lib\site-packages\pyftpdlib\ioloop.py", line 371, in call_later
+    return _CallLater(seconds, target, *args, **kwargs)
+  File "C:\Users\FabienPires\AppData\Local\Programs\Python\Python310\lib\site-packages\pyftpdlib\ioloop.py", line 179, in __init__
+    assert callable(target), "%s is not callable" % target
+AssertionError: None is not callable
+

@@ -1,67 +1,40 @@
-import string
-from itertools import product
-from time import time
-from numpy import loadtxt
+fic = "C:\\Users\\tolio\\Downloads\\Bruteforce\\mdp_plus_probable.txt"
+mdp = str(input("Veuillez saisir votre mot de passe : "))
 
+def bruteforce(word, length):
+    taille = len(mdp)
+    if taille > 8:
+        print("Votre mot de passe est trop long pour être testé avec du bruteforce.")
+    if length <= taille:
+        for i in range(0,255):
+            if mdp == word + chr(i):
+                print("Votre mot de passe est " + word + chr(i))
+                break
+            else:
+                bruteforce(word + chr(i), length + 1)
 
-def product_loop(password, generator):
-    for p in generator:
-        if ''.join(p) == password:
-            print('\nPassword:', ''.join(p))
-            return ''.join(p)
-    return False
+def dico_atk(fic,mdp):
+        with open(fic, newline='') as file:
+            data = file.read().splitlines()
+            for pwd in data:
+                if mdp == pwd:
+                    print("Le mot de passe a été trouvé dans le dictionnaire. Ce dernier est : ", pwd)
+                    break
+                else:
+                    continue
 
+def choix():
+    chx = int(input("Veuillez sélectionner le type d'attaque voulu (saisissez 1 ou 2):\n1) Bruteforce\n2) Dictionnaire\n"))
+    try:
+        if chx == 1:
+            bruteforce('', 1)
+        elif chx == 2:
+            dico_atk(fic,mdp)
+        else:
+            print("Vous n'avez pas choisi parmis Bruteforce ou Dictionnaire. Veuillez recommencer.")
+            choix()
+    except ValueError:
+        print("La valeur rentrée n'est pas correcte. Veuillez saisir uniquement 1 ou 2.")
+        choix()
 
-def bruteforce(password, max_nchar=8):
-    
-    password_commun = loadtxt('mdp_plus_probable.txt', dtype=str)
-    noms_communm = loadtxt('middle_names.txt', dtype=str)
-    cp = [c for c in password_commun if c == password]
-    cn = [c for c in noms_communm if c == password]
-    cnl = [c.lower() for c in noms_communm if c.lower() == password]
-
-    if len(cp) == 1:
-        print('\nPassword:', cp)
-        return cp
-    if len(cn) == 1:
-        print('\nPassword:', cn)
-        return cn
-    if len(cnl) == 1:
-        print('\nPassword:', cnl)
-        return cnl
-
-    print('2) Digits cartesian product')
-    for l in range(1, 9):
-        generator = product(string.digits, repeat=int(l))
-        print("\t..%d digit" % l)
-        p = product_loop(password, generator)
-        if p is not False:
-            return p
-
-    print('3) Digits + ASCII lowercase')
-    for l in range(1, max_nchar + 1):
-        print("\t..%d char" % l)
-        generator = product(string.digits + string.ascii_lowercase,
-                            repeat=int(l))
-        p = product_loop(password, generator)
-        if p is not False:
-            return p
-
-    print('4) Digits + ASCII lower / upper + punctuation')
-    # If it fails, we start brute-forcing the 'hard' way
-    # Same as possible_char = string.printable[:-5]
-    all_char = string.digits + string.ascii_letters + string.punctuation
-
-    for l in range(1, max_nchar + 1):
-        print("\t..%d char" % l)
-        generator = product(all_char, repeat=int(l))
-        p = product_loop(password, generator)
-        if p is not False:
-            return p
-
-
-# EXAMPLE
-start = time()
-bruteforce('sunshine')
-end = time()
-print('Total time: %.2f seconds' % (end - start))
+choix()
