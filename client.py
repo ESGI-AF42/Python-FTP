@@ -1,7 +1,7 @@
 import os,sys,time, save , scanport
 from ftplib import FTP
 from tkinter import N
-import brutforce
+import bruteforce
 
 
 username = ""
@@ -100,7 +100,7 @@ def app_start():
         quit()
 
     if i == 7:
-        brutforce.main()
+        bruteforce.main()
 
     if i == 8:
         scanport.main()
