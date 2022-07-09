@@ -1,5 +1,4 @@
-import pathlib, csv, shutil
-from tempfile import NamedTemporaryFile
+import pathlib, csv
 
 
 

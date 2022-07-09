@@ -1,6 +1,5 @@
-import os,sys,time, save , scanport
+import os,time, save , scanport
 from ftplib import FTP
-from tkinter import N
 import bruteforce
 
 
@@ -28,7 +27,7 @@ def main():
         except:
             print(" ")
             print("mauvais credential, veuillez réessayer")
-            time.sleep(1)
+            time.sleep(2)
             clearConsole()
 
 
