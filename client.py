@@ -117,7 +117,6 @@ def app_start():
 
 #debut navigate()
 def navigate():
-    a=None
     clearConsole()
     print("Dans quel dossier voulez-vous aller")
     file,filename , cpt = list_file_folder()
@@ -156,7 +155,8 @@ def navigate():
 
 #debut create_rep()
 def create_rep():
-    path = ftp.pwd()
+    clearConsole()
+    path = ftp.pwd()+'/'
     print("créer un dossier")
     newdir = input(path)
     pathjoin = os.path.join(path, newdir)
@@ -228,6 +228,7 @@ def delete():
 
 #debut upload_file()
 def upload_file():
+    clearConsole()
     print("écrivez le chemin exact du dossier contenant le fichier que vous souhaitez envoyer")
     file_path = input()
     print("Quel fichier voulez-vous charger ?")
@@ -239,7 +240,7 @@ def upload_file():
         print("Fichier chargé")
         while True:
             clearConsole()
-            print("Voulez-vous vraiment uploader le fichier"+ file_name+" dans "+ ftp.pwd())
+            print("Voulez-vous vraiment uploader le fichier ", file_name," dans "+ ftp.pwd())
             upload_file = input("(y/n) : ")
             if upload_file == "y" or upload_file == "Y" or upload_file == "yes":
                 command = "STOR "+file_name    
@@ -304,7 +305,7 @@ def download_file():
         
         while True:
             clearConsole()
-            print("Voulez-vous vraiment download le fichier"+ filename[j])
+            print("Voulez-vous vraiment download le fichier ", filename[j])
             down_file = input("(y/n) : ")
             if down_file == "y" or down_file == "Y" or down_file == "yes":
                 command = "RETR "+filename[j]    
